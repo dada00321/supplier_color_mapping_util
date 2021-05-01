@@ -10,7 +10,7 @@ YouTube demo video
 https://www.youtube.com/watch?v=QFUgiJNgov4
 
 
-illustration
+Illustration
 ---------------------
 
 ![image](https://i.imgur.com/QjnvSTb.png)
