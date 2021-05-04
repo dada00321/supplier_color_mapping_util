@@ -135,30 +135,17 @@ def get_color_icon_links():
     return color_icon_links
 
 ########################
-# 為求方便，且較易於驗證，(此處不另外撰寫爬蟲)
-# 手動複製 color_table_v2_2 更名為 color_table_v2_3
-# 並利用 get_color_icon_links() 新增 `color_icon_link` 欄位
-# 最後存為 color_table_v2_4
-# (需手動驗證 `color_icon_path` 欄位是否完成)
+# 利用 get_color_icon_links() 依序將顏色icon補齊
 ########################
-def add_two_cols():
+def complete_color_icons():
     csv_path = "D:/MyPrograms/Clothes2U/DB/供應商資訊 DB/Lativ_product_info/color_table_v2_3.csv"
     color_icon_dir = "D:/MyPrograms/Clothes2U/DB/服飾圖片 DB/Lativ/media2/color_icons"
     df = pd.read_csv(csv_path)
-    
     color_icon_links = get_color_icon_links()
-    #print(color_icon_links)
-    #for color_num, links in color_icon_links():
-        #str_links = ", ".join(links)
-    
-    new_color_icon_path_col = list()
-    new_color_icon_links_col = list()
     for i, record in df.iterrows():
         color_num = record["color_number"]
         color_name = record['color_name']
         prod_links = color_icon_links.get(color_num)
-        str_prod_links = ", ".join(prod_links)
-        #print(str_prod_links)
         color_icon_path = f"{color_icon_dir}/{color_num}.jpg"
         if os.path.exists(color_icon_path):
             print(f"[ALERT] 顏色編號:{color_num} 的顏色icon 已存在")
@@ -170,16 +157,8 @@ def add_two_cols():
             ans = input(f"請將 {color_name} 的顏色icon 放置到以下路徑:\n{color_icon_path}\n(press 'q' to exit): ")
             if ans == 'q':
                 break
-        new_color_icon_path_col.append(color_icon_path)
-        new_color_icon_links_col.append(str_prod_links)
     
-    csv_output_path = "D:/MyPrograms/Clothes2U/DB/供應商資訊 DB/Lativ_product_info/color_table_v2_4.csv"
-    df["color_icon_path"] = pd.Series(new_color_icon_path_col)
-    df["color_icon_links"] = pd.Series(new_color_icon_links_col) 
-    df.to_csv(csv_output_path, encoding="utf-8-sig", index=False)
-
 if __name__ == "__main__":
     #generate_structured_color_table()
     #manually_classify_colors()
-    
-    add_two_cols()
+    complete_color_icons()
