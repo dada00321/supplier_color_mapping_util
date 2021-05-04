@@ -54,7 +54,7 @@ def generate_structured_color_table():
 # 手動拆到輔色。並利用 manual_def_colors 製作 color_table_v2_3.csv
 # 如: (主色)藏青粉紅 => (主色)藏青 (輔色)粉紅
 ########################
-def munually_classify_colors():
+def manually_classify_colors():
     color_table_path = "D:/MyPrograms/Clothes2U/DB/供應商資訊 DB/Lativ_product_info/color_table_v2_2.csv"
     
     df = pd.read_csv(color_table_path)
@@ -118,6 +118,22 @@ def munually_classify_colors():
     print('\n已歸類顏色名稱:', n, sep='')
     print('\n未歸類顏色名稱:', c, sep='')
 
+########################
+# 列出顏色 icon 的商品頁連結
+########################
+def list_all_color_icon_links():
+    csv_path = "D:/MyPrograms/Clothes2U/DB/供應商資訊 DB/Lativ_product_info/tier_2_v6_3.csv"
+    color_icon_links = dict()
+    df = pd.read_csv(csv_path)
+    prod_links = df["product_link"]
+    color_nums = df["color_num"]
+    for color_num, prod_link in zip(color_nums, prod_links):
+        color_icon_links.setdefault(color_num, set())
+        color_icon_links[color_num].add(prod_link)
+    print(sorted(color_icon_links.items(), key=lambda k_v:k_v[0]))
+
 if __name__ == "__main__":
-    generate_structured_color_table()
-    munually_classify_colors()
+    #generate_structured_color_table()
+    #manually_classify_colors()
+    list_all_color_icon_links()
+    
