@@ -190,5 +190,5 @@ def complete_color_icons():
 
 if __name__ == "__main__":
     generate_structured_color_table()
-    #manually_classify_colors()
-    #complete_color_icons()
+    manually_classify_colors()
+    complete_color_icons()
