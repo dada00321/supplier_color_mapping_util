@@ -12,12 +12,14 @@ https://www.youtube.com/watch?v=QFUgiJNgov4
 
 實例
 ---------------------
-![image](https://i.imgur.com/QjnvSTb.png)
+![image](https://i.imgur.com/NRmVnO8.png)
 上圖為整理完的初步結果。
 
 橙色部分是 `顏色編號` 和 `原始顏色名稱`。因為 `原始顏色名稱` 有點太雜，故拆分成三個顏色分量: `顏色-1`~`顏色-3`。
 
 「條、邊、花、格、印花、方格」為 6 種 `原始顏色名稱` 具有的紋理特徵。（因為和顏色本身無太大關連，故拆分為 6 個獨立欄位）
+
+
 
 ![image](https://i.imgur.com/QjnvSTb.png)
 上圖為利用此小工具輔助顏色分類的畫面
