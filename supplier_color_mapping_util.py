@@ -11,8 +11,7 @@ def generate_structured_color_table():
     df = pd.read_csv(color_table_path)
     color_names = df["color_name"]
     
-    new_columns = {"主要顏色": list(),
-                   "顏色-1": list(),
+    new_columns = {"顏色-1": list(),
                    "顏色-2": list(),
                    "顏色-3": list(),
                    '條': list(), 
@@ -27,7 +26,12 @@ def generate_structured_color_table():
         # 先判斷「是否具有」特殊條紋、花樣
         for feature in features:
             if color_name.endswith(feature):
-                new_columns[feature].append(1)
+                if "方格" in color_name and feature=='格':
+                    new_columns[feature].append(0)
+                elif "印花" in color_name and feature=='花':
+                    new_columns[feature].append(0)
+                else:
+                    new_columns[feature].append(1)
             else:
                 new_columns[feature].append(0)
 
@@ -186,5 +190,5 @@ def complete_color_icons():
 
 if __name__ == "__main__":
     generate_structured_color_table()
-    manually_classify_colors()
-    complete_color_icons()
+    #manually_classify_colors()
+    #complete_color_icons()
