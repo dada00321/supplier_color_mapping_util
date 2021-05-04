@@ -135,7 +135,7 @@ def get_color_icon_links():
     return color_icon_links
 
 ########################
-# 利用 get_color_icon_links() 依序將顏色icon補齊
+# 利用 get_color_icon_links() 依序將 顏色icons 補齊
 ########################
 def complete_color_icons():
     csv_path = "D:/MyPrograms/Clothes2U/DB/供應商資訊 DB/Lativ_product_info/color_table_v2_3.csv"
