@@ -22,4 +22,4 @@ https://www.youtube.com/watch?v=QFUgiJNgov4
 
 
 ![image](https://i.imgur.com/QjnvSTb.png)
-上圖為利用此小工具輔助顏色分類的畫面
+上圖為利用此小工具輔助顏色分類的畫面（有些分類存在錯誤，後已更正）
