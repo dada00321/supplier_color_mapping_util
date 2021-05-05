@@ -24,8 +24,8 @@ https://www.youtube.com/watch?v=QFUgiJNgov4
 
 ![image](https://i.imgur.com/gBAScAb.png)
 
-模擬(前端/UI) <供應商> 上架商品 - SKU 顏色選擇。
+模擬 前端/UI <供應商> 上架商品 - SKU 顏色選擇。
 
 ![image](https://i.imgur.com/K9xLDPl.png)
 
-模擬(前端/UI) <供應商> 上架商品 - SPU 花紋選擇。
+模擬 前端/UI <供應商> 上架商品 - SPU 花紋選擇。
