@@ -23,7 +23,9 @@ https://www.youtube.com/watch?v=QFUgiJNgov4
 「條、邊、花、格、印花、方格」為 6 種 `原始顏色名稱` 具有的紋理特徵 (=> `花紋`| 因為和顏色本身無太大關連，故拆分為 6 個獨立欄位）
 
 ![image](https://i.imgur.com/gBAScAb.png)
+
 模擬(前端/UI) <供應商> 上架商品 - SKU 顏色選擇。
 
 ![image](https://i.imgur.com/K9xLDPl.png)
+
 模擬(前端/UI) <供應商> 上架商品 - SPU 花紋選擇。
