@@ -274,10 +274,12 @@ if __name__ == "__main__":
     ''' complete_color_icons() '''
     
     # [流程-4] 取得 `顏色分量`-`顏色名稱` 對應表 (<dict>)
-    ''' 
+    '''
     color_cluster_name_mapping = get_color_cluster_to_color_name_mapping()
     # ===test===
     color_cluster = "紅色" # <-- supplier 從 前端/UI 選取的 `顏色聚類` 
+    print(f"supplier 前端/UI選取顏色: {color_cluster}")
+    print("\n列出相關 `原始顏色名稱`(準備進入下一流程): ")
     print(color_cluster_name_mapping[color_cluster]) # <-- 下一頁(步) / 顯示相關顏色名稱 & 顏色 icons
     '''
     
@@ -287,5 +289,9 @@ if __name__ == "__main__":
     # ===test===
     # print(stripe_to_color_name_mapping)
     stripe = "印花" # <-- supplier 從 前端/UI 選取的 `花紋` 
+    print(f"supplier 前端/UI選取花紋: {stripe}")
+    print("\n列出相關 `原始顏色名稱`(準備進入下一流程): ")
     print(stripe_to_color_name_mapping[stripe]) # <-- 下一頁(步) / 顯示相關顏色名稱 & 顏色 icons
     '''
+    
+    pass
